@@ -38,4 +38,12 @@ public class Book extends LibraryItem {
         this.isIssued = isIssued;
     }
 
+    public void checkIssued() {
+        if (this.isIssued()) {
+            System.out.println("This is general book,you can issue this.");
+        } else {
+            System.out.println("This is reference book, you cannot issue it");
+        }
+    }
+
 }

@@ -23,6 +23,9 @@ public class LibraryMain {
             i.printBookDetails();
         }
 
+        bk1.checkIssued();
+        bk2.checkIssued();
+
     }
 
 }
