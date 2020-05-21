@@ -8,7 +8,8 @@ public class Magazine extends Periodical {
 
     @Override
     public void printBookDetails() {
-        System.out.println(this.getItemId() + " " + this.getTitle() + " " + this.getReleaseDate());
+        System.out
+                .println("This is Magagine: " + this.getItemId() + " " + this.getTitle() + " " + this.getReleaseDate());
     }
 
 }

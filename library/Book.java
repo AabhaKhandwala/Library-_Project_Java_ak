@@ -4,13 +4,19 @@ public class Book extends LibraryItem {
 
     private String genre;
     private int noOfPages;
-    private boolean isIssued;
+    private boolean isReferenceOnly;
+    private String barcode;
+    private BookStatus status;
+    private Author author;
+    private Publisher publisherName;
 
-    public Book(int itemId, String title, String genre, int noOfPages, boolean isIssued) {
+    public Book(int itemId, String title, String genre, int noOfPages, boolean isReferenceOnly, Author author) {
         super(itemId, title);
         this.genre = genre;
         this.noOfPages = noOfPages;
-        this.isIssued = isIssued;
+        this.isReferenceOnly = isReferenceOnly;
+        this.author = author;
+        // this.status = status;
 
     }
 
@@ -30,20 +36,55 @@ public class Book extends LibraryItem {
         this.noOfPages = noOfPages;
     }
 
-    public boolean isIssued() {
-        return isIssued;
+    public boolean isReferenceOnly() {
+        return isReferenceOnly;
     }
 
-    public void setIssued(boolean isIssued) {
-        this.isIssued = isIssued;
+    public void setIsReferenceOnly(boolean isReferenceOnly) {
+        this.isReferenceOnly = isReferenceOnly;
     }
 
-    public void checkIssued() {
-        if (this.isIssued()) {
-            System.out.println("This is general book,you can issue this.");
+    public String getBarcode() {
+        return barcode;
+    }
+
+    public void setBarcode(String barcode) {
+        this.barcode = barcode;
+    }
+
+    public BookStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(BookStatus status) {
+        this.status = status;
+    }
+
+    public Author getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(Author author) {
+        this.author = author;
+    }
+
+    public Publisher getPublisherName() {
+        return publisherName;
+    }
+
+    public void setPublisherName(Publisher publisherName) {
+        this.publisherName = publisherName;
+    }
+
+    public boolean checkout(int memberId) {
+        if (!this.isReferenceOnly()) {
+            System.out.println("This is reference book,you can issue this.");
+            return false;
         } else {
-            System.out.println("This is reference book, you cannot issue it");
+            System.out.println("This is refernce book,you cann't issue this.");
+            return false;
         }
+
     }
 
 }
