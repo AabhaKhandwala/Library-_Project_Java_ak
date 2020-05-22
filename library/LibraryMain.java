@@ -18,6 +18,9 @@ public class LibraryMain {
 
         Publisher pb = new Publisher();
         pb.setPublisherName("Simon & Schuster");
+        bk1.setPublisher(pb);
+        bk2.setPublisher(pb);
+        bk3.setPublisher(pb);
 
         ls.add(bk1);
         ls.add(bk2);
@@ -33,6 +36,10 @@ public class LibraryMain {
 
         bk1.checkout(101);
         bk2.checkout(101);
+        LibraryItem rb = LibraryItemFactory.createLibraryItem(LibraryItemName.REFERENCE_BOOK);
+        LibraryItem gb = LibraryItemFactory.createLibraryItem(LibraryItemName.GENERAL_BOOK);
+        LibraryItem mg = LibraryItemFactory.createLibraryItem(LibraryItemName.MAGAZINE);
+        LibraryItem np = LibraryItemFactory.createLibraryItem(LibraryItemName.NEWS_PAPER);
 
     }
 

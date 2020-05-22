@@ -1,8 +1,5 @@
 package library;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class CardHolder {
     private String name;
     private String address;

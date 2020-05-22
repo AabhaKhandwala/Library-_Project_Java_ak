@@ -2,6 +2,10 @@ package library;
 
 public class Magazine extends Periodical {
 
+    public Magazine() {
+
+    }
+
     public Magazine(int itemId, String title, String releaseDate) {
         super(itemId, title, releaseDate);
     }

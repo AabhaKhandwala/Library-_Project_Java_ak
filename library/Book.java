@@ -8,7 +8,11 @@ public class Book extends LibraryItem {
     private String barcode;
     private BookStatus status;
     private Author author;
-    private Publisher publisherName;
+    private Publisher publisher;
+
+    public Book() {
+
+    }
 
     public Book(int itemId, String title, String genre, int noOfPages, boolean isReferenceOnly, Author author) {
         super(itemId, title);
@@ -68,12 +72,12 @@ public class Book extends LibraryItem {
         this.author = author;
     }
 
-    public Publisher getPublisherName() {
-        return publisherName;
+    public Publisher getPublisher() {
+        return publisher;
     }
 
-    public void setPublisherName(Publisher publisherName) {
-        this.publisherName = publisherName;
+    public void setPublisher(Publisher publisher) {
+        this.publisher = publisher;
     }
 
     public boolean checkout(int memberId) {

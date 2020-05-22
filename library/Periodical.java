@@ -3,6 +3,10 @@ package library;
 public class Periodical extends LibraryItem {
     private String releaseDate;
 
+    public Periodical() {
+
+    }
+
     public Periodical(int itemId, String title, String releaseDate) {
         super(itemId, title);
         this.releaseDate = releaseDate;

@@ -1,6 +1,9 @@
 package library;
 
 public class NewsPaper extends Periodical {
+    public NewsPaper() {
+
+    }
 
     public NewsPaper(int itemId, String title, String releaseDate) {
         super(itemId, title, releaseDate);

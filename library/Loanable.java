@@ -4,6 +4,6 @@ public interface Loanable {
 
     void checkout();
 
-    void lateCharges();
+    void lateCharges(LoanableFrequency frequency);
 
 }
